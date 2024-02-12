@@ -11,10 +11,10 @@ import java.util.HashMap;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@SpringBootTest
+@SpringBootTest(classes = FrequencyCalculatorService.class)
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RequiredArgsConstructor
-class FrequencyCalculatorServiceTests {
+class FrequencyCalculatorServiceTest {
 
   FrequencyCalculatorService service;
 
