@@ -1,20 +1,21 @@
-package ru.swat1x.springtesttask.controller;
+package ru.swat1x.frequencycalculator.controller;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.swat1x.springtesttask.service.SampleService;
+import ru.swat1x.frequencycalculator.service.FrequencyCalculatorService;
 
 import java.util.Map;
 
 @RestController
-public class SampleController {
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@RequiredArgsConstructor
+public class FrequencyCalculatorController {
 
-  private final SampleService service;
-
-  public SampleController(SampleService service) {
-    this.service = service;
-  }
+  FrequencyCalculatorService service;
 
   @GetMapping("/frequency")
   public Map<Character, Integer> calculateFrequency(
@@ -24,3 +25,4 @@ public class SampleController {
   }
 
 }
+

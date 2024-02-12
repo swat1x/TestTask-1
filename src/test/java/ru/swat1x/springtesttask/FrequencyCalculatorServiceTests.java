@@ -1,22 +1,25 @@
 package ru.swat1x.springtesttask;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import ru.swat1x.springtesttask.service.SampleService;
+import ru.swat1x.frequencycalculator.service.FrequencyCalculatorService;
 
 import java.util.HashMap;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-class SpringTestTaskApplicationTests {
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@RequiredArgsConstructor
+class FrequencyCalculatorServiceTests {
 
-  @Autowired
-  private SampleService service;
+  FrequencyCalculatorService service;
 
   @Test
-  void frequency() {
+  void frequencyCalculatingTest() {
     var value = "aaabbbbccc567";
 
     var correctAnswer = new HashMap<Character, Integer>();

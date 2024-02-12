@@ -1,13 +1,13 @@
-package ru.swat1x.springtesttask;
+package ru.swat1x.frequencycalculator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringTestTaskApplication {
+public class FrequencyCalculatorApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(SpringTestTaskApplication.class, args);
+    SpringApplication.run(FrequencyCalculatorApplication.class, args);
   }
 
 }
